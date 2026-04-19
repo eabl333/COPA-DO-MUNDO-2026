@@ -2,8 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>BOBO Moda - Mobile</title>
+    <title>GRIFFES DOS SANTOS 👑 MODA MASCULINA</title>
+    <link rel="website icon" type="png"
+    href="SmartSelect_20260418_143844_Samsung capture.jpg">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -24,11 +27,229 @@
             --bottom-nav-height: 65px;
         }
 
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        /* Estilos padrão (desktop) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Container responsivo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Flexbox responsivo */
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* --- MODO CELULAR (até 768px) --- */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Empilhar colunas */
+    .row {
+        flex-direction: column;
+    }
+    
+    /* Botões em tamanho mobile */
+    button, .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* Menu hambúrguer (exemplo) */
+    .menu {
+        display: none;
+    }
+    
+    .menu.active {
+        display: block;
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* --- MODO COMPUTADOR (acima de 769px) --- */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .menu {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+/* --- Ajustes para telas muito pequenas (até 480px) --- */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* --- Ajustes para tablets (entre 769px e 1024px) --- */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Grid responsivo */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Ajuste para mobile */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+}
+
+/* CSS completo para responsividade */
+:root {
+    --mobile: 768px;
+    --tablet: 1024px;
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Layout flexível */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-item {
+    flex: 1 1 300px;
+}
+
+/* Mobile First (recomendado) */
+.container {
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Esconder menu em mobile inicialmente */
+.nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu hambúrguer */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
 
         html {
             scroll-behavior: smooth;
@@ -2470,6 +2691,2858 @@
             margin-bottom: 15px;
         }
 
+        .mobile-checkout-btn, .mobile-continue-shopping-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .mobile-checkout-btn {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .mobile-checkout-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .mobile-continue-shopping-btn {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .mobile-continue-shopping-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .mobile-cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Cart Trash Button */
+        .mobile-cart-item {
+            position: relative;
+            padding-right: 40px;
+        }
+
+        .cart-trash {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .cart-trash:hover {
+            background: #ff3744;
+            transform: scale(1.1);
+        }
+
+        /* Notification */
+        .mobile-notification {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 3000;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .mobile-notification.active {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        :root {
+            --primary-color: #292929;
+            --secondary-color: #c9a86c;
+            --accent-color: #e8d5b7;
+            --text-color: #696969;
+            --light-bg: #ffffff;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(51, 50, 50, 0.253);
+            --transition: all 0.3s ease;
+            --bottom-nav-height: 65px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 20px rgb(206, 9, 9);
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 10px 40px 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            width: 200px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            width: 250px;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.3rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--secondary-color);
+            color: var(--white);
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            height: 85vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8d5b7 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero-title span {
+            color: var(--secondary-color);
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: #3d3b3b;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #3f3e3e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 58, 58, 0.377);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80') center/cover no-repeat;
+            border-radius: 50% 0 0 50%;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23c9a86c\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-subtitle {
+            color: var(--secondary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 3/4;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--white);
+        }
+
+        .category-overlay h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .category-overlay span {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(29, 28, 28, 0.171);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #ff4757;
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-actions {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .product-action-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--white);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(26, 25, 25, 0.137);
+            transition: var(--transition);
+        }
+
+        .product-action-btn:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            color: #24222200;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .old-price {
+            font-size: 0.9rem;
+            color: #161616;
+            text-decoration: line-through;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .add-to-cart:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Promotions Section */
+        .promotions {
+            padding: 80px 0;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .promo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .promo-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .promo-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .promo-timer {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .timer-item {
+            text-align: center;
+            background: rgba(36, 34, 34, 0.918);
+            padding: 15px 25px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .timer-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .timer-label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .promo-image {
+            position: relative;
+        }
+
+        .promo-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .promo-discount {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: var(--secondary-color);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .promo-discount span:first-child {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .promo-discount span:last-child {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--secondary-color);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            color: #414141;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .about-feature i {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-stars {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: #272626;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .testimonial-info span {
+            font-size: 0.85rem;
+            color: #1a1919;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .contact-item span {
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-links a {
+            display: block;
+            color: #999;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 15px;
+            color: #999;
+        }
+
+        .footer-payments i {
+            font-size: 1.5rem;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            /* Hide desktop elements on mobile */
+            .header-top,
+            .nav-menu,
+            .search-box,
+            .whatsapp-btn,
+            .hero-image,
+            .hero-pattern {
+                display: none !important;
+            }
+            
+            /* Mobile Header */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+                z-index: 1000;
+            }
+            
+            .header-main {
+                padding: 12px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: var(--white);
+            }
+            
+            .header-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .header-actions {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .header-actions i {
+                font-size: 1.2rem;
+                cursor: pointer;
+                color: var(--primary-color);
+            }
+            
+            .cart-icon {
+                position: relative;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+            
+            /* Mobile Nav Menu */
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+                padding: 10px 0;
+                z-index: 1000;
+            }
+            
+            .mobile-nav-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                color: #888;
+                font-size: 0.6rem;
+                cursor: pointer;
+            }
+            
+            .mobile-nav-item.active {
+                color: var(--secondary-color);
+            }
+            
+            .mobile-nav-item i {
+                font-size: 1.2rem;
+            }
+            
+            /* Hero Mobile */
+            .hero {
+                margin-top: 60px;
+                height: auto;
+                min-height: 300px;
+                padding: 40px 15px;
+            }
+            
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.75rem;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-text {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.85rem;
+            }
+            
+            /* Categories Mobile */
+            .categories {
+                padding: 30px 0;
+            }
+            
+            .categories-grid {
+                display: flex;
+                gap: 12px;
+                overflow-x: auto;
+                padding: 0 15px;
+                scrollbar-width: none;
+            }
+            
+            .categories-grid::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .category-card {
+                min-width: 120px;
+                flex-shrink: 0;
+            }
+            
+            .category-overlay h3 {
+                font-size: 0.9rem;
+            }
+            
+            .category-overlay span {
+                font-size: 0.7rem;
+            }
+            
+            .section-header {
+                padding: 0 15px;
+                margin-bottom: 25px;
+            }
+            
+            .section-subtitle {
+                font-size: 0.7rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #f5f0eb 0%, #e9dfd7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        /* Container principal da promoção */
+        .promo-container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .promo-banner {
+            background: #0f0f0f;
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .promo-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            padding: 48px 56px;
+            background: radial-gradient(circle at 10% 20%, #1a1a1a, #0a0a0a);
+        }
+
+        /* Lado esquerdo (texto + timer) */
+        .promo-info {
+            flex: 1.2;
+            min-width: 260px;
+        }
+
+        .promo-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #0f0f0f;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .promo-info h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .promo-info h2 span {
+            color: #d4af37;
+            background: linear-gradient(135deg, #e6c87a, #b8922a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .promo-description {
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin-bottom: 32px;
+            max-width: 450px;
+            line-height: 1.5;
+        }
+
+        /* Timer - Estilo moderno */
+        .timer-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            border-radius: 56px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .promo-timer {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .timer-block {
+            background: #000000aa;
+            backdrop-filter: blur(8px);
+            padding: 12px 20px;
+            border-radius: 28px;
+            min-width: 85px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            transition: all 0.2s;
+        }
+
+        .timer-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #d4af37;
+            line-height: 1;
+            font-feature-settings: "tnum";
+            letter-spacing: 2px;
+        }
+
+        .timer-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #ccc;
+            letter-spacing: 1px;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* Botão chamativo */
+        .promo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #d4af37;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f0f0f;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+
+        .promo-btn i {
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .promo-btn:hover {
+            background: #e6c44d;
+            transform: scale(1.02);
+            box-shadow: 0 12px 22px rgba(0,0,0,0.4);
+        }
+
+        .promo-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        /* Lado direito - imagem com selo */
+        .promo-image {
+            flex: 0.8;
+            position: relative;
+            min-width: 240px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .promo-image img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 32px;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .discount-sticker {
+            position: absolute;
+            top: -20px;
+            right: -15px;
+            background: #d4af37;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            animation: pulseGlow 1.8s infinite;
+            border: 2px solid rgba(255,245,200,0.8);
+        }
+
+        .discount-sticker span:first-child {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1f1f1f;
+            text-transform: uppercase;
+        }
+
+        .discount-sticker span:last-child {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1f1f1f;
+            line-height: 1;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        /* Estado de expirado */
+        .timer-expired .timer-block {
+            opacity: 0.6;
+            border-color: #555;
+        }
+        .timer-expired .timer-number {
+            color: #aaa;
+        }
+        .expired-message {
+            background: #2c2c2c;
+            padding: 14px 24px;
+            border-radius: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: #ffaa55;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 860px) {
+            .promo-inner {
+                padding: 32px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .promo-info {
+                text-align: center;
+            }
+            .promo-timer {
+                justify-content: center;
+            }
+            .promo-info h2 {
+                font-size: 2.1rem;
+            }
+            .timer-wrapper {
+                padding: 16px 20px;
+            }
+            .discount-sticker {
+                width: 85px;
+                height: 85px;
+                top: -10px;
+                right: -5px;
+            }
+            .discount-sticker span:last-child {
+                font-size: 1.5rem;
+            }
+            .promo-image img {
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timer-block {
+                min-width: 65px;
+                padding: 8px 12px;
+            }
+            .timer-number {
+                font-size: 1.7rem;
+            }
+            .promo-info h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* efeito extra */
+        .promo-banner:hover {
+            transform: translateY(-4px);
+        }
+            
+            /* Products Mobile */
+            .products {
+                padding: 30px 0;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0 15px;
+            }
+            
+            .product-card {
+                border-radius: 12px;
+            }
+            
+            .product-info {
+                padding: 12px;
+            }
+            
+            .product-category {
+                font-size: 0.6rem;
+            }
+            
+            .product-name {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+            .current-price {
+                font-size: 1rem;
+            }
+            
+            .old-price {
+                font-size: 0.7rem;
+            }
+            
+            .product-badge {
+                padding: 3px 8px;
+                font-size: 0.6rem;
+            }
+            
+            .product-actions {
+                display: none;
+            }
+            
+            .add-to-cart {
+                padding: 10px;
+                font-size: 0.7rem;
+            }
+            
+            /* Promotions Mobile */
+            .promotions {
+                padding: 30px 0;
+            }
+            
+            .promo-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .promo-info h2 {
+                font-size: 1.3rem;
+            }
+            
+            .promo-info p {
+                font-size: 0.9rem;
+            }
+            
+            .promo-timer {
+                gap: 8px;
+                justify-content: center;
+            }
+            
+            .timer-item {
+                padding: 8px 12px;
+                min-width: 55px;
+            }
+            
+            .timer-number {
+                font-size: 1.2rem;
+            }
+            
+            .timer-label {
+                font-size: 0.6rem;
+            }
+            
+            .promo-image {
+                order: -1;
+            }
+            
+            .promo-discount {
+                width: 80px;
+                height: 80px;
+                top: -10px;
+                right: 10px;
+            }
+            
+            .promo-discount span:first-child {
+                font-size: 0.6rem;
+            }
+            
+            .promo-discount span:last-child {
+                font-size: 1.5rem;
+            }
+            
+            /* About Mobile */
+            .about {
+                padding: 30px 0;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 15px;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .about-text h2 {
+                font-size: 1.3rem;
+            }
+            
+            .about-text p {
+                font-size: 0.9rem;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            
+            .about-feature i {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            
+            .about-feature h4 {
+                font-size: 0.8rem;
+            }
+            
+            .about-feature span {
+                font-size: 0.7rem;
+            }
+            
+            /* Testimonials Mobile */
+            .testimonials {
+                padding: 30px 0;
+            }
+            
+            .testimonials-grid {
+                display: flex;
+                gap: 15px;
+                overflow-x: auto;
+                padding: 0 15px;
+                scrollbar-width: none;
+            }
+            
+            .testimonials-grid::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .testimonial-card {
+                min-width: 280px;
+                flex-shrink: 0;
+                padding: 20px;
+            }
+            
+            .testimonial-stars {
+                font-size: 0.8rem;
+                margin-bottom: 10px;
+            }
+            
+            .testimonial-text {
+                font-size: 0.8rem;
+            }
+            
+            .testimonial-avatar {
+                width: 40px;
+                height: 40px;
+            }
+            
+            /* Contact Mobile */
+            .contact {
+                padding: 30px 0;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 15px;
+            }
+            
+            .contact-info h2 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-info > p {
+                font-size: 0.9rem;
+            }
+            
+            .contact-item i {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-item span {
+                font-size: 0.85rem;
+            }
+            
+            .social-links {
+                gap: 10px;
+            }
+            
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            /* Footer Mobile */
+            .footer {
+                padding: 30px 0 70px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 0 15px;
+            }
+            
+            .footer-brand {
+                text-align: center;
+            }
+            
+            .footer-brand .logo {
+                display: block;
+            }
+            
+            .footer-brand .social-links {
+                justify-content: center;
+            }
+            
+            .footer-title {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .footer-links a {
+                font-size: 0.85rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 0 15px;
+            }
+            
+            .footer-payments {
+                justify-content: center;
+            }
+            
+            /* Cart Modal Mobile */
+            .cart-modal {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            /* Floating WhatsApp Mobile */
+            .floating-whatsapp {
+                position: fixed;
+                bottom: 85px;
+                right: 15px;
+                width: 55px;
+                height: 55px;
+                background: #25D366;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                font-size: 1.5rem;
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+                z-index: 999;
+            }
+            
+            /* Scroll to top mobile */
+            .scroll-top {
+                bottom: 100px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            /* Notification mobile */
+            .notification {
+                bottom: 100px;
+                left: 15px;
+                width: auto;
+                max-width: calc(100% - 30px);
+            }
+            
+            body {
+                padding-bottom: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                padding: 0 15px;
+            }
+            
+            .category-card {
+                min-width: 100px;
+            }
+            
+            .products-grid {
+                padding: 0 15px;
+            }
+            
+            .hero-title {
+                font-size: 1.4rem;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Desktop - Hide mobile nav by default */
+        @media (min-width: 769px) {
+            .mobile-nav,
+            .floating-whatsapp {
+                display: none !important;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Cart modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+            z-index: 2000;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-modal.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-size: 1.3rem;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-item-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-info p {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .checkout-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 3000;
+        }
+
+        .notification.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--light-bg);
+            padding-bottom: var(--bottom-nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Mobile Container */
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--white);
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+
+        /* Header Mobile */
+        .mobile-header {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        .mobile-header-top {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile-header-main {
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+
+        .mobile-logo span {
+            color: var(--secondary-color);
+        }
+
+        .mobile-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mobile-header-actions i {
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .mobile-search {
+            padding: 0 15px 12px;
+        }
+
+        .mobile-search input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #eee;
+            border-radius: 25px;
+            background: var(--light-bg);
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .mobile-search input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* Hero Mobile */
+        .mobile-hero {
+            margin-top: 100px;
+            position: relative;
+            height: 280px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8d5b7 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mobile-hero-content {
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .mobile-hero-subtitle {
+            font-size: 0.75rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .mobile-hero-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .mobile-hero-title span {
+            color: var(--secondary-color);
+        }
+
+        .mobile-hero-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .mobile-hero-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-btn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: inherit;
+        }
+
+        .mobile-btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .mobile-btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .mobile-hero-image {
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55%;
+            height: 100%;
+            background: url('Captura de tela 2026-04-01 091538.png') center/cover no-repeat;
+            border-radius: 50% 0 0 50%;
+            opacity: 0.8;
+        }
+
+        /* Categories Mobile */
+        .mobile-categories {
+            padding: 25px 0;
+            background: var(--white);
+        }
+
+        .mobile-section-header {
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+
+        .mobile-section-subtitle {
+            color: var(--secondary-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+        }
+
+        .mobile-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .mobile-categories-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 0 15px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .mobile-categories-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mobile-category-card {
+            min-width: 100px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .mobile-category-card img {
+            width: 100px;
+            height: 130px;
+            object-fit: cover;
+        }
+
+        .mobile-category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--white);
+        }
+
+        .mobile-category-overlay h4 {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Products Mobile */
+        .mobile-products {
+            padding: 25px 0;
+            background: var(--light-bg);
+        }
+
+        .mobile-products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 0 15px;
+        }
+
+        .mobile-product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-product-image {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+        }
+
+        .mobile-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mobile-product-badge {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: #ff4757;
+            color: var(--white);
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.65rem;
+            font-weight: 600;
+        }
+
+        .mobile-product-info {
+            padding: 12px;
+        }
+
+        .mobile-product-category {
+            font-size: 0.65rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mobile-product-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .mobile-product-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .mobile-current-price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .mobile-old-price {
+            font-size: 0.7rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .mobile-add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        /* Promotions Mobile */
+        .mobile-promotions {
+            padding: 25px 0;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .mobile-promo-content {
+            padding: 0 15px;
+        }
+
+        .mobile-promo-info h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .mobile-promo-info p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .mobile-promo-timer {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mobile-timer-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            min-width: 55px;
+        }
+
+        .mobile-timer-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .mobile-timer-label {
+            font-size: 0.6rem;
+            opacity: 0.8;
+        }
+
+        .mobile-promo-image {
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .mobile-promo-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .mobile-promo-discount {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background: var(--secondary-color);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-promo-discount span:first-child {
+            font-size: 0.6rem;
+            font-weight: 500;
+        }
+
+        .mobile-promo-discount span:last-child {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .mobile-whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #25D366;
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+
+        /* About Mobile */
+        .mobile-about {
+            padding: 25px 0;
+            background: var(--white);
+        }
+
+        .mobile-about-content {
+            padding: 0 15px;
+        }
+
+        .mobile-about-text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .mobile-about-text p {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .mobile-about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .mobile-about-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-about-feature i {
+            width: 35px;
+            height: 35px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .mobile-about-feature h4 {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-about-feature span {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Testimonials Mobile */
+        .mobile-testimonials {
+            padding: 25px 0;
+            background: var(--light-bg);
+        }
+
+        .mobile-testimonials-scroll {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 0 15px;
+            scrollbar-width: none;
+        }
+
+        .mobile-testimonials-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .mobile-testimonial-card {
+            min-width: 280px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .mobile-testimonial-stars {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+        }
+
+        .mobile-testimonial-text {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .mobile-testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .mobile-testimonial-info h4 {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-testimonial-info span {
+            font-size: 0.7rem;
+            color: #888;
+        }
+
+        /* Contact Mobile */
+        .mobile-contact {
+            padding: 25px 0;
+            background: var(--white);
+        }
+
+        .mobile-contact-content {
+            padding: 0 15px;
+        }
+
+        .mobile-contact-info h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .mobile-contact-info > p {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .mobile-contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobile-contact-item i {
+            width: 35px;
+            height: 35px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .mobile-contact-item span {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .mobile-social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .mobile-social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        /* Footer Mobile */
+        .mobile-footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 25px 0 80px;
+        }
+
+        .mobile-footer-content {
+            padding: 0 15px;
+        }
+
+        .mobile-footer-brand .mobile-logo {
+            color: var(--white);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .mobile-footer-brand p {
+            color: #999;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .mobile-footer-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 20px 0 12px;
+            color: var(--white);
+        }
+
+        .mobile-footer-links a {
+            display: block;
+            color: #999;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+        .mobile-footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .mobile-footer-bottom p {
+            color: #999;
+            font-size: 0.75rem;
+        }
+
+        /* Bottom Navigation */
+        .mobile-bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #888;
+            font-size: 0.65rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .mobile-nav-item.active {
+            color: var(--secondary-color);
+        }
+
+        .mobile-nav-item i {
+            font-size: 1.2rem;
+        }
+
+        /* Floating WhatsApp */
+        .mobile-floating-whatsapp {
+            position: fixed;
+            bottom: 85px;
+            right: 15px;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+        }
+
+        /* Cart Modal Mobile - CORRIGIDO */
+        .mobile-cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .mobile-cart-modal.active {
+            transform: translateX(0);
+        }
+
+        /* Impede scroll quando modal está aberto */
+        body.modal-open {
+            overflow: hidden !important;
+            position: fixed;
+            width: 100%;
+        }
+
+        .mobile-cart-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-cart-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .mobile-cart-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .mobile-cart-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .mobile-cart-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .mobile-cart-item-info h4 {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .mobile-cart-item-info p {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .mobile-cart-footer {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .mobile-cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
         .mobile-checkout-btn {
             width: 100%;
             padding: 14px;
@@ -2524,7 +5597,126 @@
         .mobile-notification.active {
             transform: translateX(-50%) translateY(0);
             opacity: 1;
-        }
+        }    /* FORÇAR MODO COMPUTADOR - DESKTOP FULL */
+/* Remove container móvel e suas limitações */
+.mobile-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Garante que elementos desktop apareçam */
+.header-top,
+.nav-menu,
+.search-box,
+.whatsapp-btn,
+.hero-image,
+.hero-pattern {
+    display: flex !important;
+}
+
+/* Remove bottom navigation e elementos exclusivos mobile */
+.mobile-nav,
+.mobile-bottom-nav,
+.floating-whatsapp,
+.mobile-floating-whatsapp,
+.mobile-menu-btn,
+.mobile-search {
+    display: none !important;
+}
+
+/* Ajusta header para desktop */
+.header {
+    position: relative !important;
+    margin-top: 0 !important;
+}
+.header-main {
+    padding: 20px 0 !important;
+}
+.logo {
+    font-size: 1.8rem !important;
+}
+
+/* Garante grids em colunas completas */
+.products-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px !important;
+}
+.categories-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+    overflow-x: visible !important;
+}
+.promo-content {
+    grid-template-columns: 1fr 1fr !important;
+}
+.about-content,
+.contact-content {
+    grid-template-columns: 1fr 1fr !important;
+}
+.testimonials-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    overflow-x: visible !important;
+}
+.footer-content {
+    grid-template-columns: 2fr 1fr 1fr 1fr !important;
+}
+
+/* Remove padding-bottom extra do body */
+body {
+    padding-bottom: 0 !important;
+}
+
+/* Hero volta ao tamanho original */
+.hero {
+    margin-top: 0 !important;
+    height: 85vh !important;
+    min-height: 600px !important;
+}
+.hero-content {
+    text-align: left !important;
+    max-width: 600px !important;
+}
+.hero-title {
+    font-size: 3.5rem !important;
+}
+.hero-image {
+    display: block !important;
+    position: absolute !important;
+    right: -100px !important;
+}
+
+/* Ajustes nos cards de produto */
+.product-card:hover {
+    transform: translateY(-10px) !important;
+}
+.product-actions {
+    display: flex !important;
+}
+.add-to-cart {
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+}
+
+/* Carrinho modal tamanho desktop */
+.cart-modal {
+    width: 400px !important;
+    right: -400px !important;
+}
+.cart-modal.active {
+    right: 0 !important;
+}
+
+/* Timer e promoção */
+.promo-timer {
+    justify-content: flex-start !important;
+}
+.timer-item {
+    min-width: 80px !important;
+    padding: 15px 25px !important;
+}
+.timer-number {
+    font-size: 2rem !important;
+}
     </style>
 </head>
 <body>
@@ -2536,14 +5728,11 @@
                 <span><i class="fas fa-phone"></i> (31) 9730-2018</span>
             </div>
             <div class="mobile-header-main">
-                <a href="#" class="mobile-logo">LOJA DO TIKTOK<span>.</span></a>
+                <a href="#" class="mobile-logo">GRIFFES<span>.</span></a>
                 <div class="mobile-header-actions">
-                    <i class="fas fa-search" id="mobileSearchBtn"></i>
+                    <i class="fas fa-search" id="mobileSearchBtn" onclick="performSearch()"></i>
                     <i class="fas fa-shopping-bag" id="mobileCartBtn"></i>
                 </div>
-            </div>
-            <div class="mobile-search" id="mobileSearchBox" style="display: none;">
-                <input type="text" placeholder="Buscar produtos...">
             </div>
         </header>
 
@@ -2575,25 +5764,31 @@
                     </div>
                 </div>
                 <div class="mobile-category-card" style="position: relative;">
-                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=200&q=80" alt="Calças">
+                    <img src="Screenshot_20260416_171742_WhatsAppBusiness.jpg" alt="Infantil">
+                    <div class="mobile-category-overlay">
+                        <h4>Infantil</h4>
+                    </div>
+                </div>
+                <div class="mobile-category-card" style="position: relative;">
+                    <img src="WhatsApp Image 2026-04-15 at 14.28.4750.jpeg" alt="Calças">
                     <div class="mobile-category-overlay">
                         <h4>Calças</h4>
                     </div>
                 </div>
                 <div class="mobile-category-card" style="position: relative;">
-                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&q=80" alt="Vestidos">
+                    <img src="Captura de tela 2026-04-01 090814.png" alt="Vestidos">
                     <div class="mobile-category-overlay">
-                        <h4>Vestidos</h4>
+                        <h4>Tenis Esportivo </h4>
                     </div>
                 </div>
                 <div class="mobile-category-card" style="position: relative;">
-                    <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=200&q=80" alt="Moda Feminina">
+                    <img src="WhatsApp Image 2026-04-15 at 14.26.27.jpeg" alt="Moda Feminina">
                     <div class="mobile-category-overlay">
                         <h4>Feminina</h4>
                     </div>
                 </div>
                 <div class="mobile-category-card" style="position: relative;">
-                    <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=200&q=80" alt="Moda Masculina">
+                    <img src="WhatsApp Image 2026-04-15 at 14.28.4441.jpeg" alt="Moda Masculina">
                     <div class="mobile-category-overlay">
                         <h4>Masculina</h4>
                     </div>
@@ -2773,7 +5968,7 @@
                         </div>
                         <div class="mobile-contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>contato@bobomoda.com.br</span>
+                            <span>contato@.com</span>
                         </div>
                         <div class="mobile-contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -2783,7 +5978,6 @@
                     <div class="mobile-social-links">
                         <a href="#" class="mobile-social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="mobile-social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="mobile-social-link"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
             </div>
@@ -2793,7 +5987,7 @@
         <footer class="mobile-footer">
             <div class="mobile-footer-content">
                 <div class="mobile-footer-brand">
-                    <a href="#" class="mobile-logo">Loja do tiktok<span>.</span></a>
+                    <a href="#" class="mobile-logo">GRIFFES dos Santos.</span></a>
                     <p>Sua loja de moda online com as melhores tendências.</p>
                 </div>
                 <h4 class="mobile-footer-title">Institucional</h4>
@@ -2810,7 +6004,7 @@
                     <a href="#">Frete e Entrega</a>
                 </div>
                 <div class="mobile-footer-bottom">
-                    <p>&copy; 2026 loja do tiktok. Todos os direitos reservados.</p>
+                    <p>&copy; 2026 GRIFFES DOS SANTOS MODA MASCULINA. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
@@ -2856,6 +6050,9 @@
                 <span>Total:</span>
                 <span id="mobileCartTotal">R$ 0,00</span>
             </div>
+<button class="mobile-continue-shopping-btn" id="mobileContinueShoppingBtn" onclick="continueShopping()">
+                <i class="fas fa-arrow-left"></i> Continuar Comprando
+            </button>
             <button class="mobile-checkout-btn" id="mobileCheckoutBtn">
                 <i class="fab fa-whatsapp"></i> Finalizar Compra
             </button>
@@ -2868,15 +6065,15 @@
     </div>
 
     <script>
-        // Products Data
+        // Products Data (mantido igual ao original)
         const products = [
             {
                 id: 1,
-                name: "Vestido Floral",
-                category: "Vestidos",
-                price: 189.90,
-                oldPrice: 249.90,
-                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&q=80",
+                name: "Moletom Canguru",
+                category: "blusa",
+                price: 120.90,
+                oldPrice: 180.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.27.jpeg",
                 badge: "-24%"
             },
             {
@@ -2908,49 +6105,734 @@
             },
             {
                 id: 5,
-                name: "Camisa Social",
-                category: "Masculina",
+                name: "Slide Gucci de laço",
+                category: "feminina",
                 price: 129.90,
                 oldPrice: 169.90,
-                image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=300&q=80",
+                image: "WhatsApp Image 2026-04-15 at 14.27.4729.jpeg",
                 badge: "-24%"
             },
             {
                 id: 6,
-                name: "Saia Plissada",
+                name: "Blusa de Moletom Canguru-Piu-Piu Geek",
                 category: "Feminina",
-                price: 119.90,
-                oldPrice: 159.90,
-                image: "data:image/jpeg;base64,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",
+                price: 159.90,
+                oldPrice: 219.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.28.jpeg",
                 badge: "-25%"
             },
             {
                 id: 7,
-                name: "Vestido Midi",
-                category: "Vestidos",
-                price: 179.90,
-                oldPrice: 229.90,
-                image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&q=80",
+                name: "Moletom Canguru-Patolino",
+                descrição: "Moletom Canguru-Patolino, perfeito para os fãs de desenhos animados! Confeccionado em tecido macio e confortável, este moletom apresenta um design divertido com o icônico personagem Patolino. Ideal para manter o estilo e o conforto em dias mais fresquinhos. Disponível em várias cores e tamanhos.",
+                category: "Feminina",
+                price: 129.90,
+                oldPrice: 179.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.271.jpeg",
                 badge: "-22%"
             },
             {
                 id: 8,
-                name: "Jaqueta Couro",
-                category: "Masculina",
-                price: 449.90,
-                oldPrice: 599.90,
-                image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&q=80",
+                name: "Moletom Canguru-Pernalonga no buraco",
+                descrição: "Moletom Canguru-Pernalonga no buraco, perfeito para os fãs de desenhos animados! Confeccionado em tecido macio e confortável, este moletom apresenta um design divertido com o icônico personagem Pernalonga saindo de um buraco. Ideal para manter o estilo e o conforto em dias mais fresquinhos. Disponível em várias cores e tamanhos.",
+                category: "Feminina",
+                price: 129.90,
+                oldPrice: 185.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.282.jpeg",
                 badge: "-25%"
-            }
-        ];
+            },
+            {
+                id: 9,
+                name: "Moletom Canguru - Frajola",
+                descrição: "Moletom Canguru - Frajola, perfeito para os fãs de desenhos animados! Confeccionado em tecido macio e confortável, este moletom apresenta um design divertido com o icônico personagem Frajola. Ideal para manter o estilo e o conforto em dias mais fresquinhos. Disponível em várias cores e tamanhos.",
+                category: "Feminina",
+                price: 129.90,
+                oldPrice: 189.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.283.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 10,
+                name: "Moletom Canguru - Spider-Man",
+                category: "Feminina",
+                price: 139.90,
+                oldPrice: 219.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.294.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 11,
+                name: "Conjunto de Moletom Marrom Masculino/Unissex",
+                category: "Masculina",
+                price: 1999.90,
+                oldPrice: 2599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.295.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 12,
+                name: "Conjunto de Moletom Azul Masculino/Unissex",
+                category: "Masculina",
+                price: 1499.90,
+                oldPrice: 2799.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.296.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 13,
+                name: "Conjunto de Moletom Masculino/Unissex",
+                category: "Masculina",
+                price: 1599.90,
+                oldPrice: 2399.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.297.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 14,
+                name: "Adidas Adizero Adios Pro 3",
+                category: "Masculina",
+                price: 899.90,
+                oldPrice: 1999.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.308.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 15,
+                name: "Adidas Adizero Evo SL",
+                category: "Masculina",
+                price: 1449.90,
+                oldPrice: 1669.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.309.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 16,
+                name: "Conjunto de Agasalho Mizuro Masculino",
+                category: "Masculina",
+                price: 289.90,
+                oldPrice: 599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.3010.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 17,
+                name: "Conjunto de Agasalho Mizuro Masculino (Grey & Black Side Stripe)",
+                category: "Masculina",
+                price: 269.90,
+                oldPrice: 599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.3111.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 18,
+                name: "Conjunto de Agasalho Mizuro Masculino (Navy Blue & Black Side Stripe)",
+                category: "Masculina",
+                price: 249.90,
+                oldPrice: 549.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.3112.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 19,
+                name: "Conjunto de Agasalho Mizuro Masculino (Beige/Sand Side Stripe)",
+                category: "Masculina",
+                price: 269.90,
+                oldPrice: 389.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.3113.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 20,
+                name: "Conjunto de Agasalho Mizuro Masculino (Black Side Stripe)",
+                category: "Masculina",
+                price: 199.90,
+                oldPrice: 289.90,
+                image: "WhatsApp Image 2026-04-15 at 14.26.3114.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 21,
+                name: "Bolsa de Mão Feminina com Alça Transversal - Estilo Executivo/ Casual",
+                category: "Moda Feminina ",
+                price: 189.90,
+                oldPrice: 399.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.44 (1)19.jpeg",
+                badge: "-25%"
+            },{
+                id: 22,
+                name: "Nécessaire Louis  Vuitton Dopp Kit de Couro - Estilo Executivo/ Casual",
+                category: "Masculina",
+                price: 4499.90,
+                oldPrice: 7599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4315.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 23,
+                name: "Bolsa Louis Vuitton Slender",
+                category: "Feminina",
+                price: 389.90,
+                oldPrice: 599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4316.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 24,
+                name: "Bolsa Saint Laurent (YSL) Loulou Medium",
+                category: "Feminina",
+                price: 449.90,
+                oldPrice: 559.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4317.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 25,
+                name: "Bolsa Saint Laurent (YSL) Loulou Small",
+                category: "Feminina",
+                price: 299.90,
+                oldPrice: 599.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4418.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 26,
+                name: "Bolsa Saint Laurent (YSL) Joe Backpack",
+                category: "Feminina",
+                price: 349.90,
+                oldPrice: 649.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4419.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 27,
+                name: "Bolsa Chanel Classic Flap Bag ",
+                category: "Feminina",
+                price: 1999.90,
+                oldPrice: 2499.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4520.jpeg",
+                badge: "-25%"
+            },
+            {
+                id: 28,
+                name: "Bolsa de Mão Feminina com Alça Transversal - Estilo Executivo/ Casual",
+                category: "Feminina",
+                price: 149.90,
+                oldPrice: 259.90,
+                image: "WhatsApp Image 2026-04-15 at 14.27.4521.jpeg",
+                badge: "-25%"
+            },
+                {
+                    id: 29,
+                    name: "Bolsa de Mão Feminina com Alça Transversal - Estilo YSL",
+                    category: "Feminina",
+                    price: 149.90,
+                    oldPrice: 199.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4522.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 30,
+                    name: "Bolsa de Ombro com Aba Estilo Chanel - Marrom",
+                    category: "Feminina",
+                    price: 169.90,
+                    oldPrice: 299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4523.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 31,
+                    name: "Bolsa de Mão Estruturada Estilo Chanel - Preto",
+                    category: "Feminina",
+                    price: 189.90,
+                    oldPrice: 239.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4624.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 32,
+                    name: "Jaqueta Corta-Vento Masculina",
+                    category: "Masculina",
+                    price: 189.90,
+                    oldPrice: 299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4625.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 33,
+                    name: "Conjunto Brasil Core Feminino (Cropped e Short)",
+                    category: "Feminina",
+                    price: 79.90,
+                    oldPrice: 159.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4626.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 34,
+                    name: "Conjunto Brasil Feminino (Verde)",
+                    category: "Feminina",
+                    price: 79.90,
+                    oldPrice: 129.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4627.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 35,
+                    name: "Conjunto Brasil Feminino (Azul)",
+                    category: "Feminina",
+                    price: 75.90,
+                    oldPrice: 119.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4728.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 36,
+                    name: "Sandália Papete Gucci Platform com Nó",
+                    category: "Feminina",
+                    price: 449.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.27.4729.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 37,
+                    name: "Agasalho de Treino Cruzeiro EC - Edição Adidas",
+                    category: "Masculina",
+                    price: 269.90,
+                    oldPrice: 499.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.3830.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 38,
+                    name: "Camisa Polo Lacoste - Coleção Crocodilo Gigante",
+                    category: "Masculina",
+                    price: 199.90,
+                    oldPrice: 359.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.3931.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 39,
+                    name: "Camiseta de Treino Cruzeiro EC - Linha Adidas Tiro 24",
+                    category: "Masculina",
+                    price: 109.90,
+                    oldPrice: 199.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.3932.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 40,
+                    name: "Camiseta de Treino Cruzeiro EC  Azul  Marinho",
+                    category: "Masculina",
+                    price: 109.90,
+                    oldPrice: 159.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.3933.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 41,
+                    name: "Blusão de Moletom Masculino - Estilo Streetwear",
+                    category: "Masculina",
+                    price: 189.90,
+                    oldPrice: 259.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4034.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 42,
+                    name: "Conjunto Lacoste Sport Masculino (Camiseta e Shorts)",
+                    category: "Masculina",
+                    price: 789.90,
+                    oldPrice: 859.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4235.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 43,
+                    name: "Conjunto Lacoste Sport Colorblock",
+                    category: "Masculina",
+                    price: 789.90,
+                    oldPrice: 1099.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4236.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 44,
+                    name: "Conjunto Lacoste Sport Court Graphics (Branco e Azul)",
+                    category: "Masculina",
+                    price: 799.90,
+                    oldPrice: 1299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4337.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 45,
+                    name: "Conjunto Lacoste Sport Court Graphics (Azul e Preto)",
+                    category: "Masculina",
+                    price: 829.90,
+                    oldPrice: 1049.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4338.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 46,
+                    name: "Conjunto Gucci Web Stripe (Camiseta e Bermuda)",
+                    category: "Masculina",
+                    price: 799.90,
+                    oldPrice: 999.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4339.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 47,
+                    name: "Conjunto Louis Vuitton Monogram Ribbom (Camiseta e Shorts)",
+                    category: "Masculina",
+                    price: 899.90,
+                    oldPrice: 1199.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4440.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 48,
+                    name: "Conjunto Gucci Web Stripe (Camiseta e short) (Preto)",
+                    category: "Masculina",
+                    price: 999.90,
+                    oldPrice: 1299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4441.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 49,
+                    name: "Conjunto Louis Vuitton Monogram Ribbom (Camiseta e Shorts) (Preto)",
+                    category: "Masculina",
+                    price: 899.90,
+                    oldPrice: 1059.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4442.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 50,
+                    name: "Conjunto Mizuro Spark/Energy Masculino (Camiseta e Shorts)",
+                    category: "Masculina",
+                    price: 229.90,
+                    oldPrice: 399.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4443.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 51,
+                    name: "Kit Mizuno Spark/Energy Masculino (Boné, Camiseta, Shorts e Tênis)",
+                    category: "Masculina",
+                    price: 129.90,
+                    oldPrice: 199.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4544.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 52,
+                    name: "Kit Mizuro Spark Lifestyle Masculino (Boné, Camiseta, Shorts e chinelo)",
+                    category: "Masculina",
+                    price: 429.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4545.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 53,
+                    name: "Tênis Gucci Chunky Snearker with GG",
+                    category: "Masculina",
+                    price: 2899.90,
+                    oldPrice: 4299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4546.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 54,
+                    name: "Kit Lacoste Windbreaker & Denim (Jaqueta Corta-Vento e Calça Jeans)",
+                    category: "Masculina",
+                    price: 1449.90,
+                    oldPrice: 2079.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4647.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 55,
+                    name: "Camiseta Fred Perry Taped Ringer (Black)",
+                    category: "Masculina",
+                    price: 439.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4748.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 56,
+                    name: "Tênis LV State",
+                    category: "Masculina",
+                    price: 1349.90,
+                    oldPrice: 2599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4749.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 57,
+                    name: "Kit de Moletons Gola Careca Masculino (Cinza e Preto)",
+                    category: "Masculina",
+                    price: 199.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4750.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 58,
+                    name: "corrente de Elos Cuban link de ouro Masculina",
+                    category: "Masculina",
+                    price: 449.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4851.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 59,
+                    name: "Boné Masculino",
+                    category: "Masculina",
+                    price: 99.90,
+                    oldPrice: 299.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4852.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 60,
+                    name: "Conjunto Armani Exchange Logo Tape (Camiseta e Calça, Boné, Corrente e Tênis)",
+                    category: "Masculina",
+                    price: 899.90,
+                    oldPrice: 1399.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4853.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 61,
+                    name: "Conjunto feminino (Azul)",
+                    category: "Feminina",
+                    price: 119.90,
+                    oldPrice: 399.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4854.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 62,
+                    name: "Conjunto feminino (Amarelo)",
+                    category: "Feminina",
+                    price: 89.90,
+                    oldPrice: 129.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4955.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 63,
+                    name: "Conjunto de treino Nike Brasil Amarelo",
+                    category: "Masculina",
+                    price: 449.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4956.jpeg",
+                    badge: "-25%"
+                },
+                {
+                    id: 64,
+                    name: "Conjunto de treino Nike Brasil Preto",
+                    category: "Masculina",
+                    price: 529.90,
+                    oldPrice: 599.90,
+                    image: "WhatsApp Image 2026-04-15 at 14.28.4957.jpeg",
+                    badge: "-25%"
+                }, 
+                {
+                    id: 65,
+                    name: "Conjunto Nike Tech Fleence Windrunner Masculino Marrom",
+                    category: "Masculina",
+                    price: 1299.90,
+                    oldPrice: 1599.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.551.jpeg",
+                    badge: "-25%"
+                },
+                
+                {
+                    id: 66,
+                    name: "Conjunto Nike Tech Fleence Windrunner Masculino Verde",
+                    category: "Masculina",
+                    price: 1349.90,
+                    oldPrice: 1699.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.562.jpeg",
+                    badge: "-25%"
+                },
+                
+                {
+                    id: 67,
+                    name: "Conjunto Nike Tech Fleence Windrunner Masculino Cinza",
+                    category: "Masculina",
+                    price: 1199.90,
+                    oldPrice: 1399.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.563.jpeg",
+                    badge: "-25%"
+                },
+                
+                {
+                    id: 68,
+                    name: "Conjunto Lascote Moletom Colorblock Masculino ( Jaqueta co Capuz e Calça Jogger)",
+                    category: "Masculina",
+                    price: 949.90,
+                    oldPrice: 1099.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.577.jpeg",
+                    badge: "-25%"
+                },
+                
+                {
+                    id: 69,
+                    name: "Conjunto Lascote Moletom Sport Colorblock Masculino ( Jaqueta com Capuz e Calça Jogger)",
+                    category: "Masculina",
+                    price: 979.90,
+                    oldPrice: 1099.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.578.jpeg",
+                    badge: "-25%"
+                },
+                
+                {
+                    id: 70,
+                    name: "Conjunto Lascote Moletom Sport Colorblock Masculino ( Jaqueta Full-Zip com Capuz e Calça Jogger)",
+                    category: "Masculina",
+                    price: 899.90,
+                    oldPrice: 999.90,
+                    image: "WhatsApp Image 2026-04-16 at 09.00.589.jpeg",
+                    badge: "-25%"
+                },
 
+                 
+                {
+                    id: 71,
+                    name: "Camiseta Polo Lacoste Sport Edição Miami Open 2026 (Masculino)",
+                    category: "Masculina",
+                    price: 549.90,
+                    oldPrice: 599.90,
+                    image: "Screenshot_20260416_171618_WhatsAppBusiness.jpg",
+                    badge: "-25%"
+                },
+
+                {
+                    id: 72,
+                    name: "Camiseta Polo Lacoste Sport Edição Miami Open 2026 (Black Edition)",
+                    category: "Masculina",
+                    price: 699.90,
+                    oldPrice: 899.90,
+                    image: "Screenshot_20260416_171628_WhatsAppBusiness.jpg",
+                    badge: "-25%"
+                },
+
+                    {
+                        id: 73,
+                        name: "Conjunto Feminino Rosa de Plush/Veludo Cristal (Jaqueta com Capuz e Ziper + Calça Jogger)",
+                        category: "Feminina",
+                        price: 389.90,
+                        oldPrice: 499.90,
+                        image: "Screenshot_20260416_171641_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+                    {
+                        id: 74,
+                        name: "Conjunto Feminino Branco de Plush/Veludo Cristal (Jaqueta com Capuz e Ziper + Calça Jogger)",
+                        category: "Feminina",
+                        price: 429.90,
+                        oldPrice: 499.90,
+                        image: "Screenshot_20260416_171713_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+                    {
+                        id: 75,
+                        name: "Conjunto Infantil Moletom Minnie Mouse Roxo (Blusa de frio com Capuz + Calça Jogger)",
+                        category: "Feminina",
+                        price: 159.90,
+                        oldPrice: 290.90,
+                        image: "Screenshot_20260416_171721_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+                    {
+                        id: 76,
+                        name: "Conjunto Infantil Moletom Minnie Mouse Pink Edition (Blusa de frio com Capuz + Calça Jogger)",
+                        category: "Feminina",
+                        price: 129.90,
+                        oldPrice: 199.90,
+                        image: "Screenshot_20260416_171729_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+                    {
+                        id: 77,
+                        name: "Conjunto Infantil Moletom Minnie Mouse Soft Pink (Blusa de frio com Capuz + Calça Jogger)",
+                        category: "Feminina",
+                        price: 139.90,
+                        oldPrice: 189.90,
+                        image: "Screenshot_20260416_171742_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+                    {
+                        id: 78,
+                        name: "Chinelo Nuvem Lacoste Slide",
+                        category: "Masculina",
+                        price: 249.90,
+                        oldPrice: 399.90,
+                        image: "Screenshot_20260416_171754_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+
+                    {
+                        id: 79,
+                        name: "Conjunto Masculino de Luxo Floral (Jaqueta com Ziper + Calça Jogger)",
+                        category: "Masculina",
+                        price: 349.90,
+                        oldPrice: 499.90,
+                        image: "Screenshot_20260417_183726_WhatsAppBusiness.jpg",
+                        badge: "-25%"
+                    },
+            ];
         // Cart
         let cart = [];
+        let currentProducts = [...products];
+        
+        // Search function
+        function performSearch() {
+            const desktopInput = document.querySelector('.search-box input');
+            const mobileInput = document.querySelector('#mobileSearchBox input');
+            const searchTerm = (desktopInput?.value || mobileInput?.value || '').toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                currentProducts = [...products];
+            } else {
+                currentProducts = products.filter(product => 
+                    product.name.toLowerCase().includes(searchTerm) || 
+                    product.category.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            renderProducts();
+            
+            // Clear inputs after search
+            if (desktopInput) desktopInput.value = '';
+            if (mobileInput) mobileInput.value = '';
+        }
 
         // Render Products
         function renderProducts() {
             const productsGrid = document.getElementById('mobileProductsGrid');
-            productsGrid.innerHTML = products.map(product => `
+            
+            if (currentProducts.length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="no-results" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; font-size: 1.3rem; color: var(--text-color); background: var(--light-bg); border-radius: 12px;">
+                        <i class="fas fa-search" style="font-size: 3rem; color: #ccc; margin-bottom: 20px;"></i>
+                        <p>Esse produto não tem</p>
+                        <p style="font-size: 1rem; opacity: 0.7;">Tente outra palavra-chave</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            productsGrid.innerHTML = currentProducts.map(product => `
                 <div class="mobile-product-card">
                     <div class="mobile-product-image">
                         <img src="${product.image}" alt="${product.name}">
@@ -3004,9 +6886,19 @@
                             <h4>${item.name}</h4>
                             <p>R$ ${item.price.toFixed(2).replace('.', ',')}</p>
                         </div>
+                        <button class="cart-trash" onclick="removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
                     </div>
                 `).join('');
             }
+        }
+
+        // Remove from Cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+            showNotification('Produto removido do carrinho!');
         }
 
         // Show Notification
@@ -3026,22 +6918,32 @@
         const cartClose = document.getElementById('mobileCartClose');
         const checkoutBtn = document.getElementById('mobileCheckoutBtn');
 
+        // Continue Shopping function
+        function continueShopping() {
+            cartModal.classList.remove('active');
+            cartOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            setTimeout(() => {
+                document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+
         cartBtn.addEventListener('click', () => {
             cartModal.classList.add('active');
             cartOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Trava scroll
+            document.body.style.overflow = 'hidden';
         });
 
         cartClose.addEventListener('click', () => {
             cartModal.classList.remove('active');
             cartOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Libera scroll
+            document.body.style.overflow = '';
         });
 
         cartOverlay.addEventListener('click', () => {
             cartModal.classList.remove('active');
             cartOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Libera scroll
+            document.body.style.overflow = '';
         });
 
         checkoutBtn.addEventListener('click', () => {
@@ -3052,7 +6954,7 @@
             const message = cart.map(item => `*${item.name}* - R$ ${item.price.toFixed(2).replace('.', ',')} (${item.quantity}x)`).join('%0A');
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const fullMessage = `Olá! Gostaria de fazer o seguinte pedido:%0A%0A${message}%0A%0A*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
-            window.open(`https://wa.me/5511999999999?text=${fullMessage}`, '_blank');
+            window.open(`https://wa.me/55319730-2018?text=${fullMessage}`, '_blank');
         });
 
         // Search Toggle
@@ -3078,34 +6980,242 @@
             });
         });
 
-        // Countdown Timer
-        function updateTimer() {
-            const days = document.getElementById('mobileDays');
-            const hours = document.getElementById('mobileHours');
-            const minutes = document.getElementById('mobileMinutes');
-            const seconds = document.getElementById('mobileSeconds');
+        // ===================== TIMER CORRIGIDO =====================
+        // Define a data final da promoção: 3 dias a partir de agora, às 23:59:59
+        let targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 3);
+        targetDate.setHours(23, 59, 59, 0);
 
-            const countDownDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+        // Elementos do timer mobile
+        const daysSpan = document.getElementById('mobileDays');
+        const hoursSpan = document.getElementById('mobileHours');
+        const minutesSpan = document.getElementById('mobileMinutes');
+        const secondsSpan = document.getElementById('mobileSeconds');
+
+        // Função que atualiza o timer a cada segundo
+        function updateMobileTimer() {
             const now = new Date().getTime();
-            const distance = countDownDate - now;
+            const distance = targetDate.getTime() - now;
 
-            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((distance % (1000 * 60)) / 1000);
+            if (distance <= 0) {
+                // Promoção encerrada: exibe 00:00:00:00 e para o intervalo
+                daysSpan.textContent = '00';
+                hoursSpan.textContent = '00';
+                minutesSpan.textContent = '00';
+                secondsSpan.textContent = '00';
+                clearInterval(timerInterval);
+                return;
+            }
 
-            days.textContent = d.toString().padStart(2, '0');
-            hours.textContent = h.toString().padStart(2, '0');
-            minutes.textContent = m.toString().padStart(2, '0');
-            seconds.textContent = s.toString().padStart(2, '0');
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysSpan.textContent = days < 10 ? '0' + days : days;
+            hoursSpan.textContent = hours < 10 ? '0' + hours : hours;
+            minutesSpan.textContent = minutes < 10 ? '0' + minutes : minutes;
+            secondsSpan.textContent = seconds < 10 ? '0' + seconds : seconds;
         }
 
-        setInterval(updateTimer, 1000);
-        updateTimer();
+        // Inicia o timer
+        let timerInterval = setInterval(updateMobileTimer, 1000);
+        updateMobileTimer(); // chamada inicial imediata
+        // ===========================================================
 
-        // Initialize
+        // Inicializar a renderização dos produtos
         renderProducts();
+        
+    // ========== SISTEMA DE PESQUISA COMPLETO ==========
+    
+    // Função principal de pesquisa (já existe no seu código, mas vamos melhorar)
+    function performSearch() {
+        // Pega o valor da pesquisa (funciona para desktop e mobile)
+        const desktopInput = document.querySelector('.search-box input');
+        const mobileInput = document.querySelector('#mobileSearchBox input');
+        const searchTerm = (desktopInput?.value || mobileInput?.value || '').toLowerCase().trim();
+        
+        if (searchTerm === '') {
+            // Se pesquisa vazia, mostra todos os produtos
+            currentProducts = [...products];
+            showNotification('🔍 Digite algo para pesquisar');
+        } else {
+            // Filtra produtos pelo nome ou categoria
+            currentProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm) || 
+                product.category.toLowerCase().includes(searchTerm)
+            );
+            
+            // Mostra mensagem com resultado
+            if (currentProducts.length === 0) {
+                showNotification(`"${searchTerm}" - Produto não encontrado ❌`);
+            } else {
+                showNotification(`🔍 ${currentProducts.length} produto(s) encontrado(s) para "${searchTerm}"`);
+            }
+        }
+        
+        // Atualiza a lista de produtos na tela
+        renderProducts();
+        
+        // Limpa os inputs após pesquisa
+        if (desktopInput) desktopInput.value = '';
+        if (mobileInput) mobileInput.value = '';
+        
+        // Rola suavemente para a seção de produtos
+        setTimeout(() => {
+            const productsSection = document.getElementById('produtos');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    }
+    
+    // Função de pesquisa ao pressionar ENTER
+    function setupSearchOnEnter() {
+        const desktopInput = document.querySelector('.search-box input');
+        const mobileInput = document.querySelector('#mobileSearchBox input');
+        
+        if (desktopInput) {
+            desktopInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    performSearch();
+                }
+            });
+        }
+        
+        if (mobileInput) {
+            mobileInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    performSearch();
+                }
+            });
+        }
+    }
+    
+    // Melhorar a função renderProducts para mostrar "produto não encontrado" de forma mais clara
+    const originalRenderProducts = renderProducts;
+    window.renderProducts = function() {
+        const productsGrid = document.getElementById('mobileProductsGrid');
+        
+        if (!productsGrid) return;
+        
+        if (currentProducts.length === 0) {
+            productsGrid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                    <div style="background: #f5f5f5; border-radius: 20px; padding: 40px 20px;">
+                        <i class="fas fa-search" style="font-size: 4rem; color: #c9a86c; margin-bottom: 20px; display: block;"></i>
+                        <h3 style="color: #292929; margin-bottom: 10px;">Produto não encontrado</h3>
+                        <p style="color: #696969;">Infelizmente não temos o produto que você procurou.</p>
+                        <p style="color: #696969; margin-top: 10px;">Tente com outro nome ou veja nossos produtos abaixo:</p>
+                        <button onclick="resetSearch()" style="margin-top: 20px; padding: 12px 30px; background: #c9a86c; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: bold;">
+                            <i class="fas fa-sync-alt"></i> Mostrar todos os produtos
+                        </button>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+        
+        // Se tem produtos, mostra normalmente
+        productsGrid.innerHTML = currentProducts.map(product => `
+            <div class="mobile-product-card">
+                <div class="mobile-product-image">
+                    <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300?text=Produto'">
+                    ${product.badge ? `<span class="mobile-product-badge">${product.badge}</span>` : ''}
+                </div>
+                <div class="mobile-product-info">
+                    <p class="mobile-product-category">${product.category}</p>
+                    <h3 class="mobile-product-name" title="${product.name}">${product.name.length > 25 ? product.name.substring(0, 25) + '...' : product.name}</h3>
+                    <div class="mobile-product-price">
+                        <span class="mobile-current-price">R$ ${product.price.toFixed(2).replace('.', ',')}</span>
+                        ${product.oldPrice ? `<span class="mobile-old-price">R$ ${product.oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}
+                    </div>
+                    <button class="mobile-add-to-cart" onclick="addToCart(${product.id})">
+                        <i class="fas fa-shopping-bag"></i> Comprar
+                    </button>
+                </div>
+            </div>
+        `).join('');
+    };
+    
+    // Função para resetar a pesquisa e mostrar todos os produtos
+    function resetSearch() {
+        currentProducts = [...products];
+        renderProducts();
+        showNotification('🔄 Mostrando todos os produtos');
+        
+        // Limpa os inputs de pesquisa
+        const desktopInput = document.querySelector('.search-box input');
+        const mobileInput = document.querySelector('#mobileSearchBox input');
+        if (desktopInput) desktopInput.value = '';
+        if (mobileInput) mobileInput.value = '';
+    }
+    
+    // Sobrescrever a função renderProducts global
+    renderProducts = window.renderProducts;
+    
+    // Inicializar pesquisa no ENTER
+    setupSearchOnEnter();
+    
+    // Adicionar evento de clique na lupa do desktop também
+    const desktopSearchBtn = document.querySelector('.search-box button');
+    if (desktopSearchBtn) {
+        desktopSearchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            performSearch();
+        });
+    }
+    
+    // Mostrar a caixa de pesquisa mobile quando clicar na lupa
+    const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+    if (mobileSearchBtn) {
+        // Criar a caixa de pesquisa mobile se não existir
+        if (!document.getElementById('mobileSearchBox')) {
+            const searchContainer = document.createElement('div');
+            searchContainer.id = 'mobileSearchBox';
+            searchContainer.style.cssText = 'padding: 12px 15px; background: white; border-bottom: 1px solid #eee; display: none;';
+            searchContainer.innerHTML = `
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="mobileSearchInput" placeholder="Pesquisar produtos..." style="flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px; font-family: inherit; font-size: 14px;">
+                    <button onclick="performSearch()" style="background: #c9a86c; border: none; border-radius: 25px; padding: 0 20px; color: white; cursor: pointer;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            `;
+            const mobileHeader = document.querySelector('.mobile-header');
+            if (mobileHeader) {
+                mobileHeader.insertAdjacentElement('afterend', searchContainer);
+            }
+            
+            // Configurar pesquisa no ENTER
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            if (mobileSearchInput) {
+                mobileSearchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        performSearch();
+                    }
+                });
+            }
+        }
+        
+        // Toggle da caixa de pesquisa
+        const mobileSearchBox = document.getElementById('mobileSearchBox');
+        mobileSearchBtn.addEventListener('click', () => {
+            if (mobileSearchBox.style.display === 'none') {
+                mobileSearchBox.style.display = 'block';
+                const input = document.getElementById('mobileSearchInput');
+                if (input) input.focus();
+            } else {
+                mobileSearchBox.style.display = 'none';
+            }
+        });
+    }
+    
+    console.log('✅ Sistema de pesquisa carregado! Clique na lupa para pesquisar produtos.');
+
     </script>
 </body>
 </html>
-
