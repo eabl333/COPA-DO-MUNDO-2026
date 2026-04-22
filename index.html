@@ -895,10 +895,6 @@ color-scheme: initial; forced-color-adjust: initial; math-depth: initial; positi
 
 <!-- PRODUTOS -->
 <div class="filters-lateral">
-  <h4>Preço máximo</h4>
-  <input type="range" id="priceFilter" min="0" max="1000" step="10" value="1000">
-  <span>R$ <span id="priceValue">1000</span>,00</span>
-
   <h4>Gênero</h4>
   <label><input type="checkbox" value="Masculino"> Masculino</label>
   <label><input type="checkbox" value="Feminino"> Feminino</label>
@@ -965,10 +961,19 @@ color-scheme: initial; forced-color-adjust: initial; math-depth: initial; positi
       <div class="logo">AS <span>Multi </span>Marcas</div>
       <p>A maior loja multimarcas do Brasil. Qualidade, estilo e preço justo desde 2015.</p>
       <div class="footer-socials">
-        <div class="soc-btn"><i class="fab fa-instagram"></i></div>
-        <div class="soc-btn"><i class="fab fa-whatsapp"></i></div>
-        <div class="soc-btn"><i class="fab fa-tiktok"></i></div>
-        <div class="soc-btn"><i class="fab fa-facebook-f"></i></div>
+        <a href="https://www.instagram.com/dossantosgriffes_031?igsh=MXMxZzR1YTdyZHo5aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="soc-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://www.instagram.com/dossantostenis031_?igsh=MWZmMzZueG0zeHo2cg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="soc-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@dossantosgriffes031_?_r=1&_t=ZS-95l4pcTEDAH" target="_blank" rel="noopener noreferrer" class="soc-btn">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1JZTBRVMk2/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="soc-btn">
+          <i class="fab fa-facebook-f"></i>
+        </a>
       </div>
     </div>
     <div class="footer-col">
@@ -1088,7 +1093,6 @@ const FEATURES = [
   {icon:'fas fa-undo', title:'Troca Fácil', desc:'30 dias para trocar.'},
   {icon:'fas fa-headset', title:'Suporte 24/7', desc:'Disponível todos os dias.'},
   {icon:'fas fa-tag', title:'Melhor Preço', desc:'Garantia de preço.'},
-  {icon:'fas fa-award', title:'100% Original', desc:'Produtos originais com nota fiscal.'}
 ];
 const MARQUEE_ITEMS = ['Frete Grátis acima de R$299','30 dias para troca','Produtos 100% Originais','Pagamento em até 12x','Entrega em todo Brasil','Mais de 12.000 produtos','Atendimento 24/7','Garantia de melhor preço'];
 
